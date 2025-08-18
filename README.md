@@ -1,4 +1,4 @@
-﻿# demoTransporte
+# demoTransporte
 
 # 🚍 App de Turismo - Guayaquil
 
@@ -14,25 +14,38 @@ Aplicación móvil para una agencia de turismo que permite:
 ## 📸 Capturas de Pantalla
 
 ### 📝 Pantalla de Login
-![Login](./assets/imagen1.png)
+<p align="center">
+  <img src="./assets/imagen1.png" alt="Login" width="250"/>
+</p>
 
 ### 🚌 Recorridos Disponibles
-![Recorridos](./assets/imagen2.png)
+<p align="center">
+  <img src="./assets/imagen2.png" alt="Recorridos" width="250"/>
+</p>
 
 ### 📍 Seguimiento en Tiempo Real
-![Seguimiento en tiempo real](./assets/imagen3.png)
+<p align="center">
+  <img src="./assets/imagen3.png" alt="Seguimiento en tiempo real" width="250"/>
+</p>
 
 ### 🏛️ Lugares por Parada
-![Sitios por parada](./assets/imagen4.png)
+<p align="center">
+  <img src="./assets/imagen4.png" alt="Sitios por parada" width="250"/>
+</p>
 
 ### 🎟️ Mi Boleto
-![Boleto QR](./assets/imagen5.png)
+<p align="center">
+  <img src="./assets/imagen5.png" alt="Boleto QR" width="250"/>
+</p>
 
 ### 👤 Mi Perfil
-![Perfil](./assets/imagen6.png)
+<p align="center">
+  <img src="./assets/imagen6.png" alt="Perfil" width="250"/>
+</p>
 
 ### 📍 Lista de Paradas por Recorrido
-![Lista de paradas](./assets/imagen7.png)
+<p align="center">
+  <img src="./assets/imagen7.png" alt="Lista de paradas" width="250"/>
+</p>
 
 ---
-

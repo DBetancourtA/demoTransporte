@@ -16,6 +16,7 @@ Aplicación móvil para una agencia de turismo que permite:
 ### 📝 Pantalla de Login
 <p align="center">
   <img src="./assets/imagen1.png" alt="Login" width="250"/>
+  <img src="./assets/imagen1b.png" alt="Login" width="250"/>
 </p>
 
 ### 🚌 Recorridos Disponibles
@@ -49,3 +50,4 @@ Aplicación móvil para una agencia de turismo que permite:
 </p>
 
 ---
+

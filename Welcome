@@ -1,0 +1,151 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vision 360</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Background container */
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      object-fit: cover;
+    }
+
+    /* Overlay for better text visibility */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    /* Container for centering */
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      z-index: 1;
+    }
+
+    /* Typing animation styles */
+    .typing-text {
+      font-size: clamp(2rem, 8vw, 4rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 1.2;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+    }
+
+    /* Cursor blink animation */
+    .typing-text.typing-complete {
+      border-right: none;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+      .typing-text {
+        font-size: 10vw;
+        letter-spacing: 0.05em;
+      }
+      
+      .container {
+        padding: 15px;
+      }
+    }
+
+    /* Tablet optimizations */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .typing-text {
+        font-size: 7vw;
+      }
+    }
+
+    /* Responsive iframe sizing */
+    @media (max-width: 768px) {
+      .background-iframe {
+        width: 150vw;
+        height: 150vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Pinterest embed -->
+  <div class="background-container">
+    <iframe 
+      class="background-iframe"
+      src="https://assets.pinterest.com/ext/embed.html?id=12947917675255461" 
+      frameborder="0" 
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <!-- Dark overlay for text visibility -->
+  <div class="overlay"></div>
+
+  <!-- Main container with typing text -->
+  <div class="container">
+    <h1 class="typing-text" id="visionText"></h1>
+  </div>
+
+  <script>
+    // Typing animation script
+    const text = "VISION 360";
+    const element = document.getElementById('visionText');
+    let index = 0;
+
+    // Start typing animation after 1.2 seconds
+    setTimeout(() => {
+      function typeWriter() {
+        if (index < text.length) {
+          element.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeWriter, 150); // 150ms between letters
+        } else {
+          // Remove cursor when typing is complete
+          element.classList.add('typing-complete');
+        }
+      }
+      
+      typeWriter();
+    }, 1200); // 1.2 second delay
+  </script>
+</body>
+</html>
